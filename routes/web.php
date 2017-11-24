@@ -2,7 +2,7 @@
 
 
 //參數只有一個
-Route::get('student/{student_no}', function ($student_no) {
+/*Route::get('student/{student_no}', function ($student_no) {
     return "學號:".$student_no;
 });
 Route::get('student/{student_no}/score', function ($student_no) {
@@ -66,7 +66,7 @@ Route::group(['prefix'=>'student'],function(){
         ])->where(['subject'=>'chinese | english | math']);
 
 });
-
+*/
 //HomeController內加入index函數
 Route::get('/','HomeController@index');
 
@@ -83,10 +83,10 @@ Route::group(['prefix'=>'student'],function(){
         'uses'=>'StudentController@getStudentScore'
     ])->where(['subject'=>'chinese | english | math']);
 });
-
+/*
 //新增路由'Cool'
 Route::get('cool','Cool\TestController@index');
-
+*/
 //修改路由'cool'，使之加入namespace路由'Cool'當中
 Route::group(['namespace'=>'Cool'],function (){
     Route::get('cool','TestController@index');
